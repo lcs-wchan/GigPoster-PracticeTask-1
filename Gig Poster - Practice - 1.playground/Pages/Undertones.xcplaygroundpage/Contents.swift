@@ -31,6 +31,46 @@ let deepRed = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
 
 // Begin your solution here...
 
+//// see where is the origin
+//canvas.drawAxes()
+//
+//// move the origin 100 pixels right, 200 pixels up
+//canvas.translate(to: Point(x: 100, y: 200))
+//
+//// let's see where the orgin is
+//canvas.drawAxes()
+//
+//// draw square at the orgin
+//canvas.drawRectangle(at: Point(x: 0, y: 0), width: 50, height: 50)
+//
+//// Make shapes have no fill
+//canvas.drawShapesWithFill = false
+//
+//// move the orgin again - over 100, up 300
+//canvas.translate(to: Point(x:100, y: 300))
+//canvas.drawAxes()
+//
+//// draw squares
+//for _ in 1...6{
+//    canvas.rotate(by: 60)
+//    canvas.drawRectangle(at: Point(x: 0, y: 0), width: 30, height: 30)
+//}
+
+// draw background
+canvas.fillColor = lightGrey
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
+
+// translate orgin
+canvas.translate(to: Point(x: 17, y: 375))
+
+// draw rotating text
+var y = 0
+for x in 1...19{
+    
+    canvas.drawText(message: "undertones", at: Point(x: -2*x, y: y-x), size: 65)
+    canvas.rotate(by: -90/18)
+    
+}
 
 /*:
  ## Use Source Control
